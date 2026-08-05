@@ -21,6 +21,18 @@ pip install -r requirements.txt
 robot --outputdir results tests
 ```
 
+Run the SauceDemo login test:
+
+```bash
+robot --outputdir results tests/login.robot
+```
+
+Run without displaying the browser (useful for CI):
+
+```bash
+HEADLESS=true robot --outputdir results tests/login.robot
+```
+
 Run only smoke tests:
 
 ```bash
@@ -33,7 +45,7 @@ Reports are written to `results/` and are intentionally excluded from Git.
 
 ```text
 tests/       Test suites
-resources/   Shared keywords and settings
+resources/   Shared keywords and page objects
 variables/   Shared variable files
 results/     Generated test reports (ignored)
 ```

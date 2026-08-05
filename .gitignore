@@ -20,3 +20,7 @@ selenium-screenshot-*.png
 .env
 .env.*
 !.env.example
+
+# Codex workspace artifacts
+/work/
+/outputs/
