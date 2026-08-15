@@ -88,6 +88,21 @@ Robot Framework generates the following files inside the `results/` directory:
 
 The `results/` directory is excluded from Git. GitHub Actions stores the reports as downloadable artifacts for 14 days.
 
+## CI Test Evidence
+
+### GitHub Actions Workflow
+
+The automated test workflow completed successfully on GitHub Actions.
+
+![GitHub Actions passed](docs/images/github-actions-passed.png)
+
+### Robot Framework Test Results
+
+All 6 automated test cases passed in headless mode.
+
+![Robot Framework test details](docs/images/github-actions-test-details.png)
+
+
 ## Project Structure
 
 ```
