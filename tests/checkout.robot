@@ -20,8 +20,8 @@ User Can Complete Checkout Successfully
     Backpack Should Display In Cart
     Start Checkout
     Input Customer Information    
-    ...    $first_name    
-    ...    $last_name    
-    ...    $postal_code
+    ...    ${CUSTOMER_FIRST_NAME}  
+    ...    ${CUSTOMER_LAST_NAME}    
+    ...    ${CUSTOMER_POSTAL_CODE}
     Finish Checkout
     Order Should Be Complete

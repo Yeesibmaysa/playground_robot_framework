@@ -10,7 +10,8 @@ ${BACKPACK_REMOVE_BUTTON}     id:remove-sauce-labs-backpack
 *** Keywords ***
 Open Shopping Cart
     [Documentation]    Open Shopping Cart Page.
-    Click Element    ${CART_LINK}
+    Wait Until Element Is Visible    ${CART_LINK}
+    Click Link    ${CART_LINK}
     Wait Until Location Contains    cart.html
 
 Backpack Should Display In Cart

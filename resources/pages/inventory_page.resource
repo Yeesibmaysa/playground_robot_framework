@@ -10,6 +10,7 @@ ${CART_BADGE}               css:.shopping_cart_badge
 Add Backpack To Cart
     [Documentation]    Add Sauce Labs Backpack To Cart.
     Click Button    ${BACKPACK_ADD_BUTTON}
+    Wait Until Element Is Visible    ${CART_BADGE}
 
 Cart Badge Should Show 1 Item
     [Documentation]    Verify That The Cart Badge Display 1 Item.
