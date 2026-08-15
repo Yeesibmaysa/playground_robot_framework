@@ -14,8 +14,11 @@ ${ORDER_COMPLETE_MESSAGE}   css:[data-test="complete-header"]
 *** Keywords ***
 Start Checkout
     [Documentation]    Start Checkout From Shopping Cart.
-    Click Button    ${CHECKOUT_BUTTON}
-    Wait Until Location Contains    checkout-step-one.html
+    Wait Until Element Is Visible    ${CHECKOUT_BUTTON}
+    Scroll Element Into View         ${CHECKOUT_BUTTON}
+    Wait Until Element Is Enabled    ${CHECKOUT_BUTTON}
+    Execute Javascript    document.querySelector('[data-test="checkout"]').click()
+    Wait Until Location Contains     checkout-step-one.html
 
 Input Customer Information
     [Documentation]    Input Customer Details And Continues To Order Overview.

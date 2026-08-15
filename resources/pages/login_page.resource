@@ -13,16 +13,22 @@ ${ERROR_MESSAGE}        css:[data-test="error"]
 
 *** Keywords ***
 Open SauceDemo Login Page
-    [Documentation]    Opens the browser at the SauceDemo login page.
+    [Documentation]    Open Browser At The SauceDemo Login Page.
     ${browser_options}=    Set Variable    ${EMPTY}
+
     IF    ${HEADLESS}
-        ${browser_options}=    Set Variable    add_argument("--headless=new");add_argument("--no-sandbox");add_argument("--disable-dev-shm-usage")
+        ${browser_options}=    Set Variable    add_argument("--headless=new");add_argument("--no-sandbox");add_argument("--disable-dev-shm-usage");add_argument("--window-size=1920,1080")
     END
+
     Open Browser    ${BASE_URL}    ${BROWSER}    options=${browser_options}
+
     IF    not ${HEADLESS}
         Maximize Browser Window
     END
+
     Set Selenium Timeout    10 seconds
+    Wait Until Element Is Visible    ${USERNAME_FIELD}
+    Wait Until Element Is Enabled    ${USERNAME_FIELD}
 
 Login With Credentials
     [Documentation]    Enters a username and password, then submits the form.

@@ -21,7 +21,10 @@ Backpack Should Display In Cart
 
 Remove Backpack From Cart
     [Documentation]    Remove Sauce Labs Backpack From Cart.
-    Click Button    ${BACKPACK_REMOVE_BUTTON}
+    Wait Until Element Is Visible    ${BACKPACK_REMOVE_BUTTON}
+    Scroll Element Into View         ${BACKPACK_REMOVE_BUTTON}
+    Wait Until Element Is Enabled    ${BACKPACK_REMOVE_BUTTON}
+    Execute Javascript    document.querySelector('[data-test="remove-sauce-labs-backpack"]').click()
 
 Backpack Should Not Display In Cart
     [Documentation]    Verify That The Sauce Labs Backpack Is Not Display In The Cart.
