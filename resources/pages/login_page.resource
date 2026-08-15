@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Keywords for interacting with the SauceDemo login page.
+Documentation       Keywords for login page Saucedemo.
 Library             SeleniumLibrary
 
 

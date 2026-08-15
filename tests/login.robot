@@ -18,4 +18,3 @@ Invalid Password Should Display Error Message
     [Documentation]    Invalid Password Should Display Error Message
     Login With Credentials    ${INVALID_USERNAME}    ${INVALID_PASSWORD}
     Error Message Should Be Displayed
-      
