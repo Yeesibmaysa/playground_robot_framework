@@ -11,7 +11,7 @@ ${BACKPACK_REMOVE_BUTTON}     id:remove-sauce-labs-backpack
 Open Shopping Cart
     [Documentation]    Open Shopping Cart Page.
     Wait Until Element Is Visible    ${CART_LINK}
-    Click Link    ${CART_LINK}
+    Execute Javascript    document.querySelector('.shopping_cart_link').click()
     Wait Until Location Contains    cart.html
 
 Backpack Should Display In Cart

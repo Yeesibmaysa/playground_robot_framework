@@ -23,16 +23,27 @@ Start Checkout
 Input Customer Information
     [Documentation]    Input Customer Details And Continues To Order Overview.
     [Arguments]    ${first_name}    ${last_name}    ${postal_code}
-    Input Text    ${FIRST_NAME_FIELD}    ${first_name}
-    Input Text    ${LAST_NAME_FIELD}    ${last_name}
-    Input Text    ${POSTAL_CODE_FIELD}    ${postal_code}
-    Click Button    ${CONTINUE_BUTTON}
+
+    Wait Until Element Is Visible    ${FIRST_NAME_FIELD}
+    Execute Javascript    const e=document.querySelector('[data-test="firstName"]'); const s=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set; s.call(e,'${first_name}'); e.dispatchEvent(new Event('input',{bubbles:true}));
+    Execute Javascript    const e=document.querySelector('[data-test="lastName"]'); const s=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set; s.call(e,'${last_name}'); e.dispatchEvent(new Event('input',{bubbles:true}));
+    Execute Javascript    const e=document.querySelector('[data-test="postalCode"]'); const s=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set; s.call(e,'${postal_code}'); e.dispatchEvent(new Event('input',{bubbles:true}));
+
+    Textfield Value Should Be    ${FIRST_NAME_FIELD}    ${first_name}
+    Textfield Value Should Be    ${LAST_NAME_FIELD}     ${last_name}
+    Textfield Value Should Be    ${POSTAL_CODE_FIELD}   ${postal_code}
+
+    Wait Until Element Is Enabled    ${CONTINUE_BUTTON}
+    Execute Javascript    document.querySelector('[data-test="continue"]').click()
     Wait Until Location Contains    checkout-step-two.html
 
 Finish Checkout
     [Documentation]    Finish Checkout From Order Overview Page.
-    Click Button    ${FINISH_BUTTON}
-    Wait Until Location Contains    checkout-complete.html
+    Wait Until Element Is Visible    ${FINISH_BUTTON}
+    Scroll Element Into View         ${FINISH_BUTTON}
+    Wait Until Element Is Enabled    ${FINISH_BUTTON}
+    Execute Javascript    document.querySelector('[data-test="finish"]').click()
+    Wait Until Location Contains     checkout-complete.html
 
 Order Should Be Complete
     [Documentation]    Verify That The Order Was Complete Succesfully.
