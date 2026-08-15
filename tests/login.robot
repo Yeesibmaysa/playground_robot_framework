@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Login tests for the SauceDemo web application.
+Documentation       Login Tests For The SauceDemo Web Application.
 Resource            ../resources/pages/login_page.resource
 Variables           ../variables/saucedemo.py
 

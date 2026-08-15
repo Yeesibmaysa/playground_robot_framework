@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Keywords for inventory page Saucedemo.
+Documentation    Keywords For Inventory Page Saucedemo.
 Library    SeleniumLibrary
 
 *** Variables ***

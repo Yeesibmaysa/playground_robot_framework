@@ -1,2 +1,2 @@
 *** Settings ***
-Documentation       Robot Framework playground test suites.
+Documentation       Robot Framework Playground Test Suites.

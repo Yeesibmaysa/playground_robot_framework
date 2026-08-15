@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Basic smoke tests for the starter project.
+Documentation       Basic Smoke Tests For The Starter Project.
 Resource            ../resources/common.resource
 Variables           ../variables/environments.py
 

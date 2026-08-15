@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Keywords for SauceDemo cart page.
+Documentation    Keywords For SauceDemo Cart Page.
 Library    SeleniumLibrary
 
 *** Variables ***

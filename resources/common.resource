@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Reusable keywords shared across test suites.
+Documentation       Reusable Keywords Shared Across Test Suites.
 
 
 *** Keywords ***

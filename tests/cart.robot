@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Cart tests for the SauceDemo web application
+Documentation    Cart Tests For The SauceDemo Web Application
 Resource    ../resources/pages/login_page.resource
 Resource    ../resources/pages/inventory_page.resource
 Resource    ../resources/pages/cart_page.resource
